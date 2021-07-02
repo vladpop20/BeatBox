@@ -12,5 +12,5 @@ This is the version 1.
 
 - Add/Load file within a dialog box
 
-![alt-text](https://github.com/vladpop20/BeatBox/blob/master/GiveMeABeat-v2.jpg)
+![alt-text](https://github.com/vladpop20/BeatBox/blob/master/BeatBox-v2.jpg)
   
