@@ -212,7 +212,7 @@ public class BeatBox {
 	public class MySendListener implements ActionListener {    // This inner class exists for saving the current pattern
 		public void actionPerformed(ActionEvent event) {
 
-			boolean[] checkboxState = new boolean[256];        // This boolean array holds the state of each checkBox
+			boolean[] checkboxState = new boolean[256];        // This boolean array holds the state of each checkBox 
 
 			for (int i = 0; i < 256; i++) {
 				JCheckBox check = checkboxList.get(i);        // Walk through the checkboxList (ArrayList of checkboxes), and get the state of each one
@@ -221,7 +221,7 @@ public class BeatBox {
 				}
 			}
 
-			// This part, just deals with writing / serializing the boolean array
+																	// This part, just deals with writing / serializing the boolean array   						(( !! ))
 			try {
 				JFileChooser fileSave = new JFileChooser();        // Brings up a file dialog box and waits on this line until the user chooses 'Save' from the dialog box.
 				fileSave.showSaveDialog(theFrame);
@@ -229,7 +229,7 @@ public class BeatBox {
 
 				FileOutputStream fileStream = new FileOutputStream(newBornFile);
 				ObjectOutputStream os = new ObjectOutputStream(fileStream);
-				os.writeObject(checkboxState);
+				os.writeObject(checkboxState);										// (( !! )) BOOLEAN PRIMITIVE IS SERIALIZABLE  (( !! ))
 
 			} catch (Exception ex) {
 				ex.printStackTrace();
